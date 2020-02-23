@@ -1,6 +1,6 @@
 # Cash Register
 
-This project consist in a cash register made with `HTML`, `CSS` and `JavaScript`, with the integration of `GitHub`. Its the first "big" project that i try with these technologies
+This project consist in the most possible minimal cash register software ever made made, using `HTML`, `CSS` and `JavaScript`, with the integration of `GitHub`. Its the first "big" project that i try with these technologies
 
 ## Functions
 
