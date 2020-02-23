@@ -1,0 +1,184 @@
+/** Configuration */
+html {
+    --cPrincipal: rgb(77, 75, 75);
+    --cSecondary: rgb(28, 28, 33);
+    --cSecondary2: rgb(206, 202, 202);
+    --cSecondary3: rgb(23, 23, 26);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--cSecondary3);
+}
+
+/** Sidebar Menu */
+#menu {
+    top: -.6em;
+    position: fixed;
+    background-color: var(--cSecondary);
+    width: 190px;
+    height: 100%;
+    left: -190px;
+    transition: all 300ms linear;
+}
+
+#menu.appear {
+    left: 0;
+}
+
+.menuIcon {
+    font-size: 5em;
+    color: var(--cSecondary2);
+    margin: .5em;
+    display: block;
+}
+
+#menu ul li {
+    text-align: center;
+    list-style: none;
+}
+
+#menu li a {
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    color: var(--cPrincipal);
+    font-size: large;
+    transition: border 0.2s linear;
+}
+#menu li a:hover {
+    cursor: pointer;
+    background-color: var(--cSecondary2);
+    color: var(--cSecondary);
+    border-left: 8px solid var(--cPrincipal)
+}
+
+.version {
+    position: fixed;
+    bottom: 0;
+    padding-left: 1em;
+}
+
+.toggleBtn {
+    position: absolute;
+    top: 20px;
+    left: 220px;
+    font-size: 2.5em;
+    color: var(--cPrincipal);
+    cursor: pointer;
+}
+.toggleBtn:hover {
+    color: #525050;
+    transform: scale(1.13, 1.13);
+}
+
+/** Item selector */
+
+#itemSelect{
+    margin: 0 3em;
+    margin-top: 5em;
+    padding: 0 5em;
+}
+#inputItem , #numItem{
+    background-color: var(--cPrincipal);
+    border: none;
+    color: #fff;
+    font-size: medium;
+    padding: .3em;
+    margin: .3em;
+}
+#inputItem:focus, #numItem:focus{
+    outline: none;
+}
+#inputItem{
+    width: 88%;
+}
+#numItem{
+    width: 6%;
+}
+
+/** Element list */
+#product{
+    margin: 1em 5em;
+}
+#product table{
+    width: 100%;
+}
+#product table thead tr th{
+    text-align: center;
+    width: 25%;
+    padding: 1em;
+    color: var(--cSecondary2);
+    border-bottom: 1px solid var(--cSecondary2);
+}
+#product tbody tr td{
+    text-align: left;
+    padding:.3em;
+    padding-left: .7em;
+    cursor: initial;
+    background-color: rgba(206, 202, 202, .7);
+}
+
+/** Confirm menu */
+/*Before click*/
+#confirmMenu{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin:1.5em;
+    border-radius: 50%;
+    background-color: var(--cSecondary3);
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+#confirmMenu:hover{
+    transform: scale(1.1, 1.1);
+}
+#confirmMenu i.icon{
+    width: 50px;
+    height: 50px;
+    font-size: 4em;
+    text-align: center;
+    color: var(--cPrincipal)
+}
+#confirmation{
+    display: none;
+}
+/*After click*/
+#confirmation.active{
+    display:block;
+}
+#confirmMenu div#confirmation button{
+    width: 95%;
+    display: block;
+    font-size: medium;
+    background-color: var(--cSecondary);
+    border:none;
+    color: var(--cPrincipal);
+    padding: .3em;
+    cursor:pointer;
+    transition: border 200ms linear;
+}
+#confirmMenu div#confirmation button:hover{
+    background-color: var(--cSecondary2);
+    color: var(--cSecondary);
+    border-left: 8px solid var(--cPrincipal)
+}
+#confirmMenu.active{
+    border-radius: 5%;
+    text-align: center;
+    background-color: var(--cSecondary);
+    width: 150px;
+    height: 120px;
+}
+#confirmMenu.active:hover{
+    transform: none
+}
+#confirmMenu div#confirmation button i{
+    text-align: center;
+}
