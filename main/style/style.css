@@ -182,3 +182,29 @@ body {
 #confirmMenu div#confirmation button i{
     text-align: center;
 }
+
+/** Total Dialog */
+#totalDialog{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    background-color: var(--cSecondary);
+    color: var(--cSecondary2);
+    border: none;
+    border-radius: 1em;
+    padding: 3em
+}
+#totalDialog table tr td{
+    text-align: center;
+    padding: 1em;
+    font-size: x-large;
+}
+#totalDialog table tr td input{
+    background-color: var(--cSecondary);
+    border: none;
+    color: var(--cSecondary2);
+    font-size: x-large;
+}
+#totalDialog table tr td input:focus{
+    outline: none;
+}
